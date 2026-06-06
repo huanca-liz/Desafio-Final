@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compras Familiares</title>
+    <link rel="stylesheet" href="./CSS/style3.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Simulador de Compras Familiares</h1>
+    </header>
+
+    <main>
+
+        <section class="card">
+
+            <h2>Explicación</h2>
+
+            <p>
+                Muchas familias cuentan con un presupuesto limitado para realizar sus compras. Este simulador permite verificar si el dinero disponible es suficiente para cubrir el costo total de los productos que se desean adquirir. Con lo que los precios subieron ya
+                no alcanzan para muchos productos.
+            </p>
+
+        </section>
+
+        <section class="card">
+
+            <h2>Ingrese los datos</h2>
+
+            <input type="number" id="presupuesto" placeholder="Presupuesto disponible">
+            <input type="number" id="precioProducto" placeholder="Precio del producto">
+            <input type="number" id="cantidadProducto" placeholder="Cantidad">
+
+            <button onclick="calcularCompras()">
+Calcular
+</button>
+
+            <div id="resultadoD"></div>
+
+        </section>
+
+        <section class="card">
+
+            <h2>Caso de estudio</h2>
+
+            <p>Presupuesto disponible: 500 Bs</p>
+            <p>Total de compra: 580 Bs</p>
+
+        </section>
+
+        <a href="./index.html" class="btn">Volver al inicio</a>
+
+    </main>
+
+    <script src="./JAVASCRIPT/ejercicio3.js"></script>
+</body>
+
+</html>

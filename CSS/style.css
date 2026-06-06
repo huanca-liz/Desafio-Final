@@ -1,0 +1,171 @@
+/* 1. Paleta Espacial y Configuración */
+
+:root {
+    /* Fondo Azul Noche Profundo con un degradado sutil */
+    --space-bg: linear-gradient(140deg, #0b0f19 0%, #111827 50%, #1e1b4b 100%);
+    /* El color de las tarjetas (un azul noche un poco más claro para que resalte) */
+    --card-bg: rgba(23, 28, 41, 0.75);
+    /* Colores Neón para acentos */
+    --neon-cyan: #06b6d4;
+    --neon-purple: #a855f7;
+    --neon-green: #10b981;
+    --text-glow: #e2e8f0;
+    --border-radius: 16px;
+    --neon-shadow: 0 0 20px rgba(6, 182, 212, 0.15);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    /* Truco de CSS: Mezclamos el degradado oscuro con "puntos" blancos que simulan estrellas */
+    background-image: radial-gradient(white, rgba(255, 255, 255, .2) 2px, transparent 40px), radial-gradient(white, rgba(255, 255, 255, .15) 1px, transparent 30px), radial-gradient(white, rgba(255, 255, 255, .1) 2px, transparent 40px), var(--space-bg);
+    background-size: 550px 550px, 350px 350px, 250px 250px, 100% 100%;
+    background-position: 0 0, 40px 60px, 130px 270px, 0 0;
+    color: var(--text-glow);
+    margin: 0;
+    min-height: 100vh;
+}
+
+
+/* 2. Header Cósmico */
+
+header {
+    background: linear-gradient(135deg, rgba(11, 15, 25, 0.6), rgba(30, 27, 75, 0.6));
+    backdrop-filter: blur(10px);
+    /* Efecto vidrio esmerilado */
+    -webkit-backdrop-filter: blur(10px);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    border-bottom: 1px solid rgba(6, 182, 212, 0.3);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    /* Efecto de brillo neón en el título */
+    text-shadow: 0 0 10px rgba(6, 182, 212, 0.6), 0 0 20px rgba(168, 85, 247, 0.4);
+}
+
+main {
+    width: 90%;
+    max-width: 750px;
+    margin: 40px auto;
+}
+
+
+/* 3. Tarjetas "Glassmorphism" Espacial (No son blancas) */
+
+.card {
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 35px;
+    margin-bottom: 30px;
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    /* Borde estelar sutil */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), var(--neon-shadow);
+}
+
+
+/* 4. Inputs Estilo Cyberpunk/Espacial */
+
+input {
+    width: 100%;
+    padding: 14px 18px;
+    margin: 10px 0 25px 0;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    font-size: 1rem;
+    color: white;
+    background-color: rgba(15, 23, 42, 0.6);
+    transition: var(--transition);
+}
+
+input:focus {
+    background-color: rgba(15, 23, 42, 0.9);
+    border-color: var(--neon-cyan);
+    outline: none;
+    box-shadow: 0 0 15px rgba(6, 182, 212, 0.4);
+}
+
+
+/* 5. Botones Aurora/Boreal Extravagante */
+
+button,
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    /* Degradado estilo aurora verde/azul */
+    background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+    color: #0b0f19;
+    /* Texto oscuro para que se lea perfecto sobre el botón brillante */
+    padding: 14px 28px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: 0 4px 20px rgba(0, 242, 254, 0.4);
+    width: 100%;
+}
+
+@media (min-width: 576px) {
+    button,
+    .btn {
+        width: auto;
+    }
+}
+
+button:hover,
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 242, 254, 0.6);
+    filter: brightness(1.1);
+}
+
+button:active,
+.btn:active {
+    transform: translateY(1px);
+}
+
+
+/* 6. Bloques de Resultado (Nebulosa de Color) */
+
+#resultadoA,
+#resultadoB,
+#resultadoD {
+    margin-top: 20px;
+    padding: 18px;
+    /* Fondo morado espacial translúcido */
+    background: rgba(168, 85, 247, 0.15);
+    border-left: 5px solid var(--neon-purple);
+    border-radius: 4px 12px 12px 4px;
+    color: #e9d5ff;
+    /* Color lila claro para el texto */
+    font-weight: 600;
+    font-size: 1.05rem;
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.1);
+}
+
+
+/* 7. Footer Profundo */
+
+footer {
+    text-align: center;
+    background: rgba(7, 10, 18, 0.9);
+    color: #64748b;
+    padding: 30px;
+    font-size: 0.95rem;
+    margin-top: 50px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}

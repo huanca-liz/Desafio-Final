@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carburantes</title>
+    <link rel="stylesheet" href="./CSS/style1.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Abastecimiento de Carburantes</h1>
+    </header>
+
+    <main>
+
+        <section class="card">
+
+            <h2>Explicación</h2>
+
+            <p>
+                Uno de los principales problemas actuales en Bolivia es la escasez de carburantes, como gasolina y diésel. Este problema afecta directamente al transporte, la producción y la vida cotidiana de las personas.</p>
+            <p>
+                La falta de carburante también impacta en el transporte público, ya que muchos vehículos no pueden operar con normalidad. Como consecuencia, las personas tienen dificultades para trasladarse a sus trabajos, estudios o realizar actividades cotidianas.
+            </p>
+
+        </section>
+
+        <section class="card">
+
+            <h2>Ingrese los datos</h2>
+
+            <input type="number" id="reserva" placeholder="Reserva inicial">
+            <input type="number" id="consumo" placeholder="Consumo diario">
+            <input type="number" id="reabastecimiento" placeholder="Reabastecimiento diario">
+            <input type="number" id="critico" placeholder="Nivel crítico">
+
+            <button onclick="calcularCarburante()">
+Calcular
+</button>
+
+            <div id="resultadoA"></div>
+
+        </section>
+
+        <section class="card">
+
+            <h2>Caso de estudio</h2>
+
+            <p>Reserva inicial: 10000 litros</p>
+            <p>Consumo diario: 1200 litros</p>
+            <p>Reabastecimiento diario: 300 litros</p>
+            <p>Nivel crítico: 2000 litros</p>
+
+        </section>
+
+        <a href="./index.html" class="btn">Volver al inicio</a>
+
+    </main>
+
+    <script src="./JAVASCRIPT/ejercicio1.js"></script>
+</body>
+
+</html>

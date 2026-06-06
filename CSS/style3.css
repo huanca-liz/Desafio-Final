@@ -1,0 +1,179 @@
+/* 1. Paleta de Colores Elegante y Configuración */
+
+:root {
+    /* Fondo Morado Orquídea Ultra Oscuro (Cielo nocturno profundo y lujoso) */
+    --space-bg: linear-gradient(140deg, #14051c 0%, #1a0826 50%, #2a0b3d 100%);
+    /* Tarjetas color ciruela translúcidas con efecto de cristal de lujo */
+    --card-bg: rgba(36, 14, 51, 0.7);
+    /* Colores Neón Femeninos y Elegantes */
+    --rose-gold: #ffb7b2;
+    /* Rosado suave Oro Rosa */
+    --neon-orchid: #e040fb;
+    /* Magenta / Orquídea vibrante */
+    --gold-dust: #ffe082;
+    /* Dorado suave para estrellas y detalles */
+    --text-glow: #fae8ff;
+    --border-radius: 16px;
+    --neon-shadow: 0 0 25px rgba(224, 64, 251, 0.15);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    /* Fondo oscuro con estrellas doradas y oro rosa */
+    background-image: radial-gradient(#fff, rgba(255, 255, 255, .3) 2px, transparent 40px), radial-gradient(var(--gold-dust), rgba(255, 224, 130, .2) 1px, transparent 30px), /* ¡Estrellas doradas! */
+    radial-gradient(var(--rose-gold), rgba(255, 183, 178, .2) 2px, transparent 50px), /* Estrellas oro rosa */
+    var(--space-bg);
+    background-size: 550px 550px, 350px 350px, 250px 250px, 100% 100%;
+    background-position: 0 0, 40px 60px, 130px 270px, 0 0;
+    color: var(--text-glow);
+    margin: 0;
+    min-height: 100vh;
+}
+
+
+/* 2. Header de Alta Costura */
+
+header {
+    background: linear-gradient(135deg, rgba(20, 5, 28, 0.8), rgba(42, 11, 61, 0.8));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    border-bottom: 2px solid var(--rose-gold);
+    /* Elegante línea oro rosa */
+    box-shadow: 0 4px 25px rgba(255, 183, 178, 0.15);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    letter-spacing: 1.5px;
+    /* Brillo místico en oro rosa y orquídea */
+    text-shadow: 0 0 15px var(--rose-gold), 0 0 25px var(--neon-orchid);
+}
+
+main {
+    width: 90%;
+    max-width: 750px;
+    margin: 40px auto;
+}
+
+
+/* 3. Tarjetas de Cristal Ciruela */
+
+.card {
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 35px;
+    margin-bottom: 30px;
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(255, 183, 178, 0.15);
+    /* Borde oro rosa ultra fino */
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.6), var(--neon-shadow);
+}
+
+
+/* 4. Inputs Sofisticados */
+
+input {
+    width: 100%;
+    padding: 14px 18px;
+    margin: 10px 0 25px 0;
+    border: 2px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    font-size: 1rem;
+    color: white;
+    background-color: rgba(20, 5, 28, 0.5);
+    transition: var(--transition);
+}
+
+input:focus {
+    background-color: rgba(20, 5, 28, 0.85);
+    border-color: var(--neon-orchid);
+    /* Destello magenta al escribir */
+    outline: none;
+    box-shadow: 0 0 15px rgba(224, 64, 251, 0.4);
+}
+
+
+/* 5. Botón Oro Rosa Radiante */
+
+button,
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    /* Degradado sedoso de Magenta a Oro Rosa */
+    background: linear-gradient(135deg, var(--neon-orchid) 0%, #ff8da1 50%, var(--rose-gold) 100%);
+    color: #14051c;
+    /* Texto oscuro ciruela para un contraste fino y legible */
+    padding: 14px 28px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: 0 4px 20px rgba(255, 183, 178, 0.3);
+    width: 100%;
+}
+
+@media (min-width: 576px) {
+    button,
+    .btn {
+        width: auto;
+    }
+}
+
+button:hover,
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(224, 64, 251, 0.4);
+    filter: brightness(1.05);
+}
+
+button:active,
+.btn:active {
+    transform: translateY(1px);
+}
+
+
+/* 6. Bloques de Resultado (Polvo de Estrellas Dorado) */
+
+#resultadoA,
+#resultadoB,
+#resultadoD {
+    margin-top: 20px;
+    padding: 18px;
+    /* Fondo dorado muy tenue y mágico */
+    background: rgba(255, 224, 130, 0.08);
+    border-left: 5px solid var(--gold-dust);
+    border-radius: 4px 12px 12px 4px;
+    color: #ffeeb3;
+    /* Texto champaña/dorado claro */
+    font-weight: 600;
+    font-size: 1.05rem;
+    box-shadow: 0 0 15px rgba(255, 224, 130, 0.1);
+}
+
+
+/* 7. Footer de la Realeza */
+
+footer {
+    text-align: center;
+    background: #08020b;
+    /* El tono más oscuro de la paleta */
+    color: #685770;
+    padding: 30px;
+    font-size: 0.95rem;
+    margin-top: 50px;
+    border-top: 1px solid rgba(255, 183, 178, 0.08);
+}
